@@ -6,16 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>盆栽模擬器</title>
 </head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heart{
+  height: 100px;
+  width: 100px;
+  background-color: #f6d5e5;
+  position: relative;
+  transform: rotate(-45deg);
+}
+.heart:before{
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #f6d5e5;
+  top: -50%;
+  border-radius: 50%;
+}  
+.heart:after{
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #f6d5e5;
+  right: -50%;
+  border-radius: 50%;
+}  
+</style>
 <body>
-    
+    <div class="heart" id="heart"></div>
 </body>
 <script>
 var flag = window.alert( "你好，美麗寶貝，你的裝置已經被我駭了。" );
 var score=0;
 if(flag){
   alert( "" ); 
-}
-else{
+}else{
     while(score==0){
         var flag2=window.confirm("愛我？");
         if (flag2 == true) {
